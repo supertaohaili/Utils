@@ -310,7 +310,8 @@ public final class ToastUtils {
             sToast.setView(customView);
             sToast.setDuration(duration);
         } else {
-            sToast = Toast.makeText(Utils.getContext(), text, duration);
+            sToast = Toast.makeText(Utils.getContext(), null, duration);
+            sToast.setText(text);
         }
         sToast.setGravity(gravity, xOffset, yOffset);
         sToast.show();
